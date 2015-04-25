@@ -1,0 +1,267 @@
+/*! PocketGrid 1.1.0
+* Copyright 2013 Arnaud Leray
+* MIT License
+*/
+/* Border-box-sizing */
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Clearfix */
+.block-group {
+  *zoom: 1;
+}
+.block-group:before, .block-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.block-group:after {
+  clear: both;
+}
+
+.block-group {
+  /* ul/li compatibility */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nested grid */
+.block-group > .block-group {
+  clear: none;
+  float: left;
+  margin: 0 !important;
+}
+
+/* Default block */
+.block {
+  float: left;
+  width: 100%;
+}
+
+.mm-block {
+  padding: 20px;
+}
+
+.mm-block-1-2 {
+  width: 50%;
+}
+
+.mm-block-2-3 {
+  width: 66.6667%;
+}
+
+.mm-block-1-3 {
+  width: 33.3333%;
+}
+
+.mm-block-1-4 {
+  width: 25%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.mm-container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.mm-section {
+  margin: 20px 0;
+}
+
+.mm-section--gray {
+  background: rgb(240, 242, 252);
+}
+
+.mm-logo {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  height: 80px;
+}
+
+.mm-logo polygon,
+.mm-logo path {
+  fill: white;
+  opacity: 0.5;
+  transition: 0.4s opacity;
+}
+
+.mm-logo:hover polygon,
+.mm-logo:hover path {
+  opacity: 0.8;
+}
+
+.mm-hero {
+  position: relative;
+  background-color: gray;
+  height: 50vh;
+
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+.mm-hero-caption {
+  font-size: 60px;
+  line-height: 50vh;
+  font-weight: 800;
+  letter-spacing: -2px;
+
+  text-align: center;
+  color: white;
+}
+
+.mm-header--1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(36, 46, 145);
+  margin-bottom: 20px;
+}
+
+.mm-img {
+  width: 100%;
+}
+
+.mm-textInput,
+.mm-button,
+.mm-radioLabel {
+  font-family: "proxima-nova", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.mm-textInput {
+  border: 1px solid rgb(36, 46, 145);
+  width: 100%;
+}
+
+.mm-button {
+  display: block;
+
+  background-color: rgb(36, 46, 145);
+  color: white;
+  font-weight: 600;
+
+  margin: 20px 0;
+  outline: none;
+  border: none;
+
+  transition: 0.4s background-color;
+}
+
+.mm-button:hover {
+  background-color: rgb(26, 33, 103);
+}
+
+.mm-zeroFont {
+  font-size: 0;
+}
+
+.mm-radio {
+  display: none;
+}
+
+.mm-radioLabel {
+  display: inline-block;
+  border: 1px solid rgb(36, 46, 145);
+  color: rgb(36, 46, 145);
+  font-weight: 600;
+  padding: 20px 30px;
+  margin: 0 10px 10px 0;
+  background: white;
+
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .mm-radioLabel {
+  background: rgb(36, 46, 145);
+  color: white;
+}
+
+.mm-pullQuote {
+  font-family: Georgia, serif;
+
+  position: relative;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+
+  max-width: 50%;
+  padding: 20px;
+  margin: auto;
+
+  color: rgb(36, 46, 145);
+}
+.mm-pullQuote:before,
+.mm-pullQuote:after {
+  position: absolute;
+  font-size: 80px;
+  font-weight: 800;
+  color: rgb(123, 126, 136);
+}
+.mm-pullQuote:before {
+  content: "“";
+  left: -50px;
+  top: 0;
+}
+.mm-pullQuote:after {
+  content: "”";
+  right: -20px;
+  bottom: -20px;
+}
+
+.mm-pullQuoteAttr {
+  text-align: center;
+  color: rgb(123, 126, 136);
+  margin-bottom: 60px;
+}
+
+.mm-text {
+  line-height: 24px;
+}
+
+.mm-signOff {
+  font-style: italic;
+}
+
+.mm-footer {
+  background: rgb(36, 46, 145);
+  padding: 20px;
+}
+
+.mm-fullLogo {
+  display: block;
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.mm-disclaimer {
+  display: block;
+
+  text-align: center;
+  color: white;
+
+  width: 250px;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 10px auto;
+}
